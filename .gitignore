@@ -1,0 +1,73 @@
+#Xcode
+build/
+DerivedData/
+*~.nib
+*.
+*..
+#obtiveC and Swift
+*.hmap
+*.ipa
+#Import project SVN
+*.svn
+#OS X
+.DS_Store
+*.swp
+profile
+# Xcode build files
+DerivedData/
+build/
+Builds/
+#####
+# Xcode private settings (window sizes, bookmarks, breakpoints, custom executables, smart groups)
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+####
+# Xcode 4
+xcuserdata
+!xcschemes
+# Xcode 4
+*.moved-aside
+####
+# Xcode 5
+*.xccheckout
+*.xcuserstate
+####
+# Xcode 7
+*.xcscmblueprint
+####
+# AppCode
+.idea/
+####
+####
+# CocoaPods
+!Pods/
+!Podfile
+!Podfile.lock
+*.lock
+####
+# Carthage
+Carthage/Build.rbenv-vars
+!Cartfile
+!Cartfile.private
+!Cartfile.resolved
+####
+# rbenv
+.rbenv-vars
+#####
+# OS X temporary files that should never be committed
+.DS_Store
+*.swp
+*.lock
+profile
+#####
+# DotEnv files
+.env
+####
+# Xcode temporary files that should never be committed
+*~.nib

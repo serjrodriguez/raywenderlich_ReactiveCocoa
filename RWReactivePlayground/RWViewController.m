@@ -8,6 +8,7 @@
 
 #import "RWViewController.h"
 #import "RWDummySignInService.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface RWViewController ()
 
@@ -37,6 +38,17 @@
   
   // initially hide the failure message
   self.signInFailureText.hidden = YES;
+    
+    [[[self.usernameTextField.rac_textSignal
+       map:^id(NSString *text) {
+           return @(text.length);
+       }]
+      filter:^BOOL(NSNumber *length) {
+          return [length integerValue] > 3;
+      }]
+     subscribeNext:^(id x) {
+         NSLog(@"%@", x);
+     }];
 }
 
 - (BOOL)isValidUsername:(NSString *)username {
